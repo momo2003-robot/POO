@@ -1,0 +1,80 @@
+nom: attalah mohamed 
+exercice1
+
+Q2 commande pour compilez les classes tv et io :
+javac -sourcepath src src/tv/*.java -d classes
+javac -sourcepath src src/io/*.java -d classes
+
+Q3 exucution de la commande 
+jar cvf premierJar.jar -C classes tv -C classes io
+
+Q4 visiualiser le contenu de larchive
+jar tvf premierJar.jar
+
+Q5 jar cvfm tv1.jar tv-manifest -C classes tv
+
+Q6visualiser le jar
+ java -jar tv1.jar
+Q7 en utulisant cvfe
+jar cvfe tv1bis.jar tv.TvMain -C classes tv
+
+Q8  premiere methode en utulisant le manifest (cvfm)
+ jar cvfm tv3.jar tv3-manifest -C classes tv
+ sans manifeste 
+  jar cvfe tv3bis.jar tv.TvMain3 -C classes tv
+
+Q9 java -jar tv3bis.jar timoleon
+
+execie2
+Q1 compilez les deux class (io,tv)
+javac -sourcepath src src/tv/*.java -d classes
+javac -sourcepath src src/io/*.java -d classes
+--execution de inputMain:
+java -classpath classes io.InputMain
+exucution detailles:
+java -classpath classes io.InputMain
+ give a String : ? momo
+your String value was => momo
+
+ give an int : ? mo
+wrong input : please give an int
+ give an int : ? 1
+your int was => 1
+Q2 elle est faites sans erreur dans les test
+commande utuliser :
+javac -sourcepath src src/battleship/Ship.java -d classes
+javac -classpath junit-console.jar:classes test/battleship/ShipTest.java
+java -jar junit-console.jar -classpath test:classes -scan-classpath
+
+
+jai terminer le reste des question jusqua la question 8 
+commande utuliser pour compiler Cell et TestCell et executer les test
+1-  javac -classpath junit-console.jar:classes test/battleship/CellTest.java
+2-  javac -sourcepath src src/battleship/Cell.java -d classes
+3- java -jar junit-console.jar -classpath test:classes -scan-classpath
+
+Q8 compiler la classe sea:
+javac -sourcepath src src/battleship/Sea.java -d classes
+Q9 compiler la classe game :
+javac -sourcepath src src/battleship/Game.java -d classes
+Q10 compiler FirtsBatlleShipMain
+javac -sourcepath src src/battleship/FirstBattleShipMain.java -d classes
+
+Q11 compiler la classe SecondBattleShipMain
+javac -sourcepath src src/battleship/SecondBattleShipMain.java -d classes
+
+Q12 compiler la classe ThirdBattleShipMain
+javac -sourcepath src src/battleship/ThirdBattleShipMain.java -d classes
+
+Q13 creer le fichier SecondBattleShipMain.jar
+jar cvfe SecondBattleShipMain.jar battleship.SecondBattleShipMain -C classes battleship
+
+
+
+
+
+
+
+
+
+

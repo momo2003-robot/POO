@@ -1,0 +1,49 @@
+## name : Attalah mohamed.
+## presentation de tp et ses objectifs
+
+Le tp4 consiste à faire des pactages et à faire des tests et ecrire une classe bikeStation qui creer une station de vélos du n capacités. elle contient 6 methodes. La derniére méthode lance une exception. Ainsi créer un programme BikestationMain qui une location de vélos "Timoleon" de 10 vélos et ajouter 2 vélos a la station. elle permet de prndre un vélo a la position n passer en argument lors de l'éxcution. Si un vélo est disponible dans cette posssition affiche l'identifiant du vélo, c'est non renvoie un message pour passer un la bonne position.
+
+
+## La documentation 
+```
+javadoc -sourcepath src -subpackages vlille -d docs
+```
+
+ouvrire le fichier index.htm qui se trouve dans docs dans un navigateur web
+
+## compilation des classes
+```
+javac -sourcepath src src/vlille/*.java -d classes
+```
+```
+javac -sourcepath src src/vlille/util/BikeModel.java -d classes
+```
+## compilation des tests
+```
+javac -classpath junit-console.jar:classes test/vlille/*.java 
+```
+## execution des tests 
+```
+java -jar junit-console.jar -classpath test:classes    -scan-classpath
+```
+
+## execusion de programme BikeStationMain
+```
+java -classpath classes vlille.BikeStationMain 1 
+```
+ exemple de trace : b002 
+ ```
+java -classpath classes vlille.BikeStationMain 
+```
+
+ exemple de trace : Svp rentrez l'emplacement du vélo que vous voulez prendre 
+ ```
+```
+java -classpath classes vlille.BikeStationMain 1 
+```
+ il n'y a pas de velo dans cet emplacement 
+ ```
+## execusion du programme BikeMain
+``` 
+java -classpath classes vlille.BikeMain 
+```
